@@ -30,7 +30,24 @@ var generate1 = function (numRows) {
  * @param {number} numRows
  * @return {number[][]}
  */
-var generate2 = function (numRows) {}
+var generate2 = function (numRows) {
+  const res = []
+  let i = 1
+  while (i <= numRows) {
+    if (i == 1) {
+      res.push([1])
+    } else {
+      const l = []
+      for (let j = 1; j < i - 1; j++) {
+        l.push(res[i - 2][j - 1] + res[i - 2][j])
+      }
+      const r = [1, ...l, 1]
+      res.push(r)
+    }
+    i = i + 1
+  }
+  return res
+}
 
 /**
  * @param {number} numRows
@@ -38,6 +55,6 @@ var generate2 = function (numRows) {}
  */
 var generate3 = function (numRows) {}
 
-console.log(generate1(11))
+console.log(generate1(2))
 console.log(generate2(5))
 console.log(generate3(5))
