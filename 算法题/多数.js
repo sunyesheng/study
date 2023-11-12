@@ -65,3 +65,4 @@ const nums = [2, 2, 1, 1, 1, 2, 2]
 console.log('result 1', majorityElement1(nums))
 console.log('result 2', majorityElement2(nums))
 console.log('result 3', majorityElement3(nums))
+console.log('result 3', majorityElement3(nums))
